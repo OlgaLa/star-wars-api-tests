@@ -5,12 +5,9 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v1
-      - uses: addnab/docker-run-action@v2
-        with:
-         image: gradle:jdk15-hotspot
-         options: -v ${{ github.workspace }}:/home/gradle/project --rm -u gradle -w /home/gradle/project
-         run: |
-           gradle test
+      - name: build and test
+        run: |
+         docker run --rm -u gradle -v ${{ github.workspace }}:/home/gradle/project -w /home/gradle/project gradle:jdk15-hotspot gradle test
  
          
           
