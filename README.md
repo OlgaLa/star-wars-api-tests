@@ -8,7 +8,7 @@ How to run the tests with gradle:
 3. Go to the project folder
 4. Run the command in terminal:
 
-`./gradlew test`
+`gradle test` or `./gradlew test` (for Windows: `gradlew test`)
 
 How to run the tests in Docker:
 1. [Install Docker](https://docs.docker.com/get-docker/) on your local machine 
