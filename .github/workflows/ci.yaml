@@ -5,15 +5,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v1
-      - name: build docker 
-        uses: docker/build-push-action@v2.3.0
-        with: 
-          context: .
-          file: Dockerfile
-          tags: starwars-build:ci
-      - name: run docker
-        run: |
-         docker run -v "$(pwd)/output:/home/gradle/src/build/reports/" starwars-build:ci
+      - uses: addnab/docker-run-action@v2
+        with:
+         image: gradle:jdk15-hotspot
+         options: -v ${{ github.workspace }}:/home/gradle/project
+         run: |
+          --rm -u gradle -w /home/gradle/project gradle gradle test
  
          
           
