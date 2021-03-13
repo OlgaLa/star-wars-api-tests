@@ -8,9 +8,9 @@ jobs:
       - uses: addnab/docker-run-action@v2
         with:
          image: gradle:jdk15-hotspot
-         options: -v ${{ github.workspace }}:/home/gradle/project
+         options: -v ${{ github.workspace }}:/home/gradle/project --rm -u gradle -w /home/gradle/project
          run: |
-          --rm -u gradle -w /home/gradle/project gradle gradle test
+           gradle test
  
          
           
