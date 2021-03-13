@@ -12,7 +12,7 @@ public class RootTest extends TestBase {
 
 
     @Test
-    public void givenBaseURL_thenResponseContainsCorrectURLs() {
+    public void givenGetBaseUrl_thenResponseContainsCorrectRecoursesUrls() {
 
         var rootResponse = starWarsApiClient
                 .getDeserializedResponse("", RootResponse.class);
@@ -28,11 +28,10 @@ public class RootTest extends TestBase {
     }
 
     @Test
-    public void givenRootRequest_thenReturnSchema() {
+    public void givenGetBaseUrl_thenAllRecoursesHaveSchema() {
 
         var response = starWarsApiClient
                 .getDeserializedResponse("", RootResponse.class);
-
 
         assertAll(
                 () -> assertDoesNotThrow(() -> starWarsApiClient.ensureSchema(response.films)),

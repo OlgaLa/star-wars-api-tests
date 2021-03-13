@@ -2,8 +2,6 @@ package constants;
 
 public final class ApiNames
 {
-    private ApiNames() {}
-
     public static String FILMS = "films/";
     public static String PEOPLE = "people/";
     public static String PLANETS = "planets/";
@@ -11,6 +9,5 @@ public final class ApiNames
     public static String STARSHIPS = "starships/";
     public static String VEHICLES = "vehicles/";
     public static String SCHEMA = "schema";
-
 }
 

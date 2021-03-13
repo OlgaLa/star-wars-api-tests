@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class PeopleTest extends TestBase {
 
     @Test
-    public void givenAllPeople_thenAllPeopleExist() {
+    public void givenGetAllPeople_thenReturnAllPeople() {
 
         var peopleResponse = starWarsApiClient.getDeserializedResponse(PEOPLE, PeopleResponse.class);
 
@@ -32,7 +32,7 @@ public class PeopleTest extends TestBase {
 
 
     @Test
-    public void givenPeopleAndSchema_thenReturnPeopleLikeInSchema() throws JsonProcessingException, ProcessingException {
+    public void givenGetPeopleAndSchema_thenReturnPeopleLikeInSchema() throws JsonProcessingException, ProcessingException {
 
         var schema = given()
                 .get(PEOPLE + SCHEMA)
