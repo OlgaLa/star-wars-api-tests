@@ -4,7 +4,4 @@ COPY . /home/gradle/src
 
 WORKDIR /home/gradle/src
 
-RUN ls
-
-RUN gradle test --no-daemon
-
+CMD ["gradle", "test", "-q", "--no-daemon"]

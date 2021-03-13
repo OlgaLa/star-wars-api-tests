@@ -1,0 +1,13 @@
+name: star-wars-api-tests
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: build and test
+        run: |
+         docker run --rm -v "${{ github.workspace }}:/home/gradle/project" -w /home/gradle/project gradle:jdk15-hotspot gradle test
+ 
+         
+          
