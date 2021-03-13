@@ -4,7 +4,7 @@ import io.restassured.RestAssured;
 import models.RootResponse;
 import org.junit.jupiter.api.Test;
 
-import static constants.ApiNames.*;
+import static constants.Resources.*;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 

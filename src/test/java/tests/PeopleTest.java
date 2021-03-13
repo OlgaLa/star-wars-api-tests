@@ -7,8 +7,8 @@ import com.github.fge.jsonschema.main.JsonSchemaFactory;
 import models.PeopleResponse;
 import org.junit.jupiter.api.Test;
 
-import static constants.ApiNames.PEOPLE;
-import static constants.ApiNames.SCHEMA;
+import static constants.Resources.PEOPLE;
+import static constants.Resources.SCHEMA;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

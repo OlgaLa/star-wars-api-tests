@@ -1,6 +1,6 @@
 package constants;
 
-public final class ApiNames
+public final class Resources
 {
     public static String FILMS = "films/";
     public static String PEOPLE = "people/";
