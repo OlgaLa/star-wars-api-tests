@@ -2,6 +2,12 @@ name: star-wars-api-tests
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v1
+      - name: build docker 
+        uses: docker/build-push-action@v2.3.0
+        with: 
+          context: .
+          file: Dockerfile
+          
