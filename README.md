@@ -33,3 +33,7 @@ docker run --rm -u gradle -v "$(PWD):/home/gradle/project" -w /home/gradle/proje
 
 Open `index.html` in a browser to see the tests results. This file will be generated in the folder: `/TheStarWarsAPI/build/reports/tests/test/`
 
+You should see the following results:
+
+![junit test results screenshot](docs/test-results.png)
+
