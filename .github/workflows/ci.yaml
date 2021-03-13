@@ -12,8 +12,8 @@ jobs:
           file: Dockerfile
           tags: starwars-build:ci
       - name: run docker
-        uses: addnab/docker-run-action@v2
-        with:
-          image: starwars-build:ci
+        run: |
+         docker run -v "$(pwd)/output:/home/gradle/src/build/reports/" starwars-build:ci
+ 
          
           
