@@ -3,7 +3,7 @@
 The project contains API tests for https://swapi.dev/
 
 How to run the tests with gradle:
-1. [Install gradle](https://gradle.org/install/)
+1. [Install gradle](https://gradle.org/install/) and the latest java
 2. Clone the project
 3. Go to the project folder
 4. Run the command in terminal:
