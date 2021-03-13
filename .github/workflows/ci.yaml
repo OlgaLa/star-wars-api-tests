@@ -10,4 +10,10 @@ jobs:
         with: 
           context: .
           file: Dockerfile
+          tags: starwars-build:ci
+      - name: run docker
+        uses: addnab/docker-run-action@v2
+        with:
+          image: starwars-build:ci
+         
           
