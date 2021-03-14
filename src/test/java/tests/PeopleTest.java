@@ -16,10 +16,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class PeopleTest extends TestBase {
 
     @Test
-    public void givenGetAllPeople_thenReturnAllPeople() {
+    public void getAllPeople_Returns_Correct_Number_Of_People() {
 
         var peopleResponse = starWarsApiClient.getDeserializedResponse(PEOPLE, PeopleResponse.class);
-
+        var totalNumberOfPeople = peopleResponse.count;
         var numberOfPeople = peopleResponse.results.size();
 
         while (peopleResponse.next != null) {
@@ -27,12 +27,12 @@ public class PeopleTest extends TestBase {
             numberOfPeople += peopleResponse.results.size();
         }
 
-        assertEquals(peopleResponse.count, numberOfPeople);
+        assertEquals(totalNumberOfPeople, numberOfPeople);
     }
 
 
     @Test
-    public void givenGetPeopleAndSchema_thenReturnPeopleLikeInSchema() throws JsonProcessingException, ProcessingException {
+    public void getPeople_Returns_JsonPayload_Which_Matches_PeopleSchema() throws JsonProcessingException, ProcessingException {
 
         var schema = given()
                 .get(PEOPLE + SCHEMA)

@@ -10,9 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RootTest extends TestBase {
 
-
     @Test
-    public void givenGetBaseUrl_thenResponseContainsCorrectRecoursesUrls() {
+    public void getBaseUrl_Response_Contains_Correct_Recourses_Urls() {
 
         var rootResponse = starWarsApiClient
                 .getDeserializedResponse("", RootResponse.class);
@@ -28,7 +27,7 @@ public class RootTest extends TestBase {
     }
 
     @Test
-    public void givenGetBaseUrl_thenAllRecoursesHaveSchema() {
+    public void getBaseUrl_Every_Resource_Has_Defined_Schema() {
 
         var response = starWarsApiClient
                 .getDeserializedResponse("", RootResponse.class);
@@ -44,7 +43,7 @@ public class RootTest extends TestBase {
     }
 
     @Test
-    public void givenHTTPUrl_thenRedirectToHTTPS() {
+    public void request_to_HTTPUrl_RedirectedToHTTPS() {
 
         final String httpURL = RestAssured.baseURI.replace("https:/", "http:/");
         given()
