@@ -37,3 +37,9 @@ You should see the following results:
 
 ![junit test results screenshot](docs/test-results.png)
 
+## View the test report produced by CI 
+
+This repository contains a GitHub Actions build pipeline which is triggered on every push. It executes `gradle test` command in a docker container, and then uploads test reports as build artifacts. 
+
+You can find and download them by navigating to https://github.com/OlgaLa/star-wars-api-tests/actions and selecting the latest run log. The artifacts would be located in **Artifacts** section at the bottom of the page.
+
